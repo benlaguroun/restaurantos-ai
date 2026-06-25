@@ -1,9 +1,4 @@
-## Day 6 — Step 5: Create the README
-
-Create `README.md` at the root of the project and paste this:
-
-```md
-# RestaurantOS AI 🍽
+# RestaurantOS AI
 
 > AI-powered restaurant management platform built for the Kaggle 5-Day AI Agents Intensive Capstone — Agents for Business track.
 
@@ -21,6 +16,7 @@ RestaurantOS AI is a full-stack business intelligence platform that uses a multi
 ---
 
 ## Architecture
+
 ```
 
 ┌─────────────────────────────────┐
@@ -54,34 +50,34 @@ getOrders getDailySalesTrend
 │ 5 tools via JSON-RPC │
 └─────────────────────────────────┘
 
-````
+```
 
 ---
 
 ## Tech Stack
 
-| Layer | Technology |
-|-------|-----------|
-| Frontend | Next.js 16, TypeScript, Tailwind CSS v4 |
-| Auth | Auth.js v5 (JWT, credentials provider) |
-| AI Agent | Google Gemini 2.0 Flash Lite, Google ADK |
-| Database | PostgreSQL (Neon), Prisma ORM v5 |
-| MCP Server | Custom JSON-RPC server (port 3001) |
-| Charts | Recharts |
-| Deployment | Vercel + Neon |
+| Layer      | Technology                               |
+| ---------- | ---------------------------------------- |
+| Frontend   | Next.js 16, TypeScript, Tailwind CSS v4  |
+| Auth       | Auth.js v5 (JWT, credentials provider)   |
+| AI Agent   | Google Gemini 2.0 Flash Lite, Google ADK |
+| Database   | PostgreSQL (Neon), Prisma ORM v5         |
+| MCP Server | Custom JSON-RPC server (port 3001)       |
+| Charts     | Recharts                                 |
+| Deployment | Vercel + Neon                            |
 
 ---
 
 ## Kaggle Judging Criteria Coverage
 
-| Criterion | Implementation |
-|-----------|---------------|
-| ✅ Agent / Multi-agent system | Orchestrator + 5 specialist tools |
-| ✅ MCP Server | Custom MCP server on port 3001 |
-| ✅ Antigravity | Evaluation suite in `/evaluation/antigravity` |
-| ✅ Security | Auth.js JWT, protected routes, role-based access |
-| ✅ Deployability | Vercel + Neon, env vars documented |
-| ✅ Agent Skills | Tool calling, function declarations |
+| Criterion                     | Implementation                                   |
+| ----------------------------- | ------------------------------------------------ |
+| ✅ Agent / Multi-agent system | Orchestrator + 5 specialist tools                |
+| ✅ MCP Server                 | Custom MCP server on port 3001                   |
+| ✅ Antigravity                | Evaluation suite in `/evaluation/antigravity`    |
+| ✅ Security                   | Auth.js JWT, protected routes, role-based access |
+| ✅ Deployability              | Vercel + Neon, env vars documented               |
+| ✅ Agent Skills               | Tool calling, function declarations              |
 
 ---
 
@@ -92,7 +88,7 @@ getOrders getDailySalesTrend
 ```bash
 git clone https://github.com/yourusername/restaurantos-ai.git
 cd restaurantos-ai
-````
+```
 
 ### 2. Install dependencies
 
@@ -210,11 +206,3 @@ restaurantos-ai/
 [YouTube link — coming soon]
 
 ---
-
-## License
-
-MIT
-
-```
-
-```
