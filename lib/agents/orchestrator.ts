@@ -47,8 +47,10 @@ export async function runOrchestrator(
   // Agentic loop — keeps running until no more tool calls
   let response = await genai.models.generateContent({
     model: "gemini-2.0-flash-lite",
-    systemInstruction: SYSTEM_PROMPT,
-    tools: [{ functionDeclarations: toolDeclarations }],
+    config: {
+      systemInstruction: SYSTEM_PROMPT,
+      tools: [{ functionDeclarations: toolDeclarations }],
+    },
     contents,
   });
 
@@ -61,6 +63,7 @@ export async function runOrchestrator(
     // Execute all tool calls
     for (const part of toolCallParts) {
       const { name, args } = part.functionCall!;
+      if (!name) continue;
       console.log(`[Agent] Calling tool: ${name}`, args);
 
       const result = await executeTool(name, args as Record<string, unknown>);
@@ -82,8 +85,10 @@ export async function runOrchestrator(
 
     response = await genai.models.generateContent({
       model: "gemini-2.0-flash-lite",
-      systemInstruction: SYSTEM_PROMPT,
-      tools: [{ functionDeclarations: toolDeclarations }],
+      config: {
+        systemInstruction: SYSTEM_PROMPT,
+        tools: [{ functionDeclarations: toolDeclarations }],
+      },
       contents: updatedContents,
     });
 

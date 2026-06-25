@@ -168,7 +168,7 @@ export default function AnalyticsPage() {
             />
             <YAxis tick={{ fontSize: 11 }} tickFormatter={(v) => `$${v}`} />
             <Tooltip
-              formatter={(value: number) => [`$${value.toFixed(2)}`, "Revenue"]}
+              formatter={(value) => [`$${Number(value).toFixed(2)}`, "Revenue"]}
               labelStyle={{ fontSize: 12 }}
             />
             <Line
@@ -203,7 +203,7 @@ export default function AnalyticsPage() {
                 width={80}
               />
               <Tooltip
-                formatter={(value: number) => [value, "Units sold"]}
+                formatter={(value) => [Number(value), "Units sold"]}
                 labelStyle={{ fontSize: 12 }}
               />
               <Bar
