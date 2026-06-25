@@ -129,7 +129,7 @@ export default function Home() {
             View Live Demo →
           </Link>
           <a
-            href="https://github.com/yourusername/restaurantos-ai"
+            href="https://github.com/benlaguroun/restaurantos-ai"
             target="_blank"
             style={{
               background: "white",
