@@ -86,7 +86,7 @@ getOrders getDailySalesTrend
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/restaurantos-ai.git
+git clone https://github.com/benlaguroun/restaurantos-ai.git
 cd restaurantos-ai
 ```
 
